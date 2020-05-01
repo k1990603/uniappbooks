@@ -1,0 +1,215 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/two/two",
+			"style": {
+				"navigationBarTitleText": "书城",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/one/one",
+			"style": {
+				"navigationBarTitleText": "书架",
+				"enablePullDownRefresh": true,
+				"disableScroll":true,
+				        "app-plus":{
+				            "bounce":"none"
+				        }
+			}
+		},
+		// {
+		// 	"path": "pages/login/login",
+		// 	"style": {
+		// 		// "navigationBarTitleText": "书架"
+		// 	}
+		// }
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/two/book/classification/classification",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/two/comic/classification/classification",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/two/book/bookDetail/bookDetail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/two/book/bookread/bookread",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/two/comic/comicread/comicread",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/two/comic/comicDetail/comicDetail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/two/book/book_mall/index",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		// {
+		// 	"path": "pages/two/book/book_mall/details",
+		// 	"style": {}
+		// },
+		{
+			"path": "pages/two/comic/comic_mall/index",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		// {
+		// 	"path": "pages/two/comic/comic_mall/details",
+		// 	"style": {}
+		// },
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/user/myCode/myCode",
+			"style": {
+				"navigationBarTitleText": "二维码"
+			}
+		}, {
+			"path": "pages/user/charge/charge",
+			"style": {
+				"navigationBarTitleText": "书币充值"
+			}
+		}, {
+			"path": "pages/user/chargeMoney/chargeMoney",
+			"style": {
+				"navigationBarTitleText": "充值"
+			}
+		}, {
+			"path": "pages/user/myPromote/myPromote",
+			"style": {
+				"navigationBarTitleText": "一级分销"
+			}
+		}, {
+			"path": "pages/user/myPromoteTwo/myPromoteTwo",
+				"style": {
+					"navigationBarTitleText": "二级分销"
+				}
+			}, {
+			"path": "pages/user/myPromoteThird/myPromoteThird",
+			"style": {
+				"navigationBarTitleText": "三级分销"
+			}
+		}, {
+			"path": "pages/two/comic/comicType/comicType",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/two/comic/comicRanking/comicRanking",
+			"style": {
+				"navigationBarTitleText": "漫画排行",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/two/comic/moreSend/moreSend",
+			"style": {
+				"navigationBarTitleText": "打赏记录",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/two/comic/moreCommon/moreCommon",
+				"style": {
+					"navigationBarTitleText": "评论记录",
+					"enablePullDownRefresh": true,
+					"app-plus": {
+					    "softinputNavBar": "none"
+					}
+			}
+		}, {
+			"path": "pages/two/book/moreSend/moreSend",
+			"style": {
+				"navigationBarTitleText": "打赏记录",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/two/book/moreCommon/moreCommon",
+				"style": {
+					"navigationBarTitleText": "评论记录",
+					"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/two/book/bookType/bookType",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/two/book/bookRanking/bookRanking",
+			"style": {
+				"navigationBarTitleText": "小说排行",
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#999",
+		"selectedColor": "#E14A4A",
+		"backgroundColor": "#fff",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/one/one",
+				"text": "书架",
+				"iconPath": "/static/images/tabBar/bookstore-o.png",
+				"selectedIconPath": "/static/images/tabBar/bookstore.png"
+			},
+			{
+				"pagePath": "pages/two/two",
+				"text": "书城",
+				"iconPath": "/static/images/tabBar/bookshelf-o.png",
+				"selectedIconPath": "/static/images/tabBar/bookshelf.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "/static/images/tabBar/personal-o.png",
+				"selectedIconPath": "/static/images/tabBar/personal.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#0081ff",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom",
+		"app-plus": {
+			"titleView": false,
+			"animationType": "slide-in-right",
+			"animationDuration": 300
+		}
+	}
+}
