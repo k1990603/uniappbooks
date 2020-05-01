@@ -8,7 +8,7 @@
 		</cu-custom>
 		<view class="loginContainer ">
 		  <view class="wrap_logo">
-		    <image class="logo" mode="aspectFit" src="/static/images/authlogo.gif" />
+		    <image class="logo" mode="aspectFit" src="/static/images/authlogo.png" />
 		  </view>
 		  <view class="wrap_form">
 		    <!-- <form catchsubmit="formSubmit"> -->

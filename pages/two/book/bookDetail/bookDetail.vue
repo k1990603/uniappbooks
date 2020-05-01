@@ -325,8 +325,8 @@
 				        res => {
 							setTimeout(()=>{
 									uni.showToast({ icon: 'none', title: '打赏'+values+'书币', duration: 1500 });
-									this.getbookDetailAction()
 							},500)
+							this.getbookDetailAction()
 							this.modalName = null
 				        },
 				        err => {}

@@ -4724,7 +4724,7 @@ var render = function() {
                 staticClass: _vm._$g(5, "sc"),
                 attrs: {
                   mode: "aspectFit",
-                  src: "/static/images/authlogo.gif",
+                  src: "/static/images/authlogo.png",
                   _i: 5
                 }
               })
@@ -10200,7 +10200,7 @@ var render = function() {
                 staticClass: _vm._$g(5, "sc"),
                 attrs: {
                   mode: "aspectFit",
-                  src: "/static/images/authlogo.gif",
+                  src: "/static/images/authlogo.png",
                   _i: 5
                 }
               })

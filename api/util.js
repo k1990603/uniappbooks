@@ -40,12 +40,12 @@ const request = (url, data, option = { method: 'POST', contentType: 'form' }) =>
 				setTimeout(()=>{
 					uni.showToast({ icon: 'none', title: '未登录', duration: 1500 });
 				},200)
+				resolve(res.data);
 				}else{
 					setTimeout(()=>{
 						uni.showToast({ icon: 'none', title: res.data.desc, duration: 1500 });
 					},500)
 				}
-				resolve(res.data);
 			// return reject(res.data.desc);
 		} else {
 			// console.log(res, '2222')

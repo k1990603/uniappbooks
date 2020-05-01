@@ -314,8 +314,8 @@
 				        res => {
 							setTimeout(()=>{
 									uni.showToast({ icon: 'none', title: '打赏'+values+'书币', duration: 1500 });
-									this.getComicDetailAction()
 							},500)
+							this.getComicDetailAction()
 							this.modalName = null
 				        },
 				        err => {}

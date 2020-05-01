@@ -1,9 +1,9 @@
 <template>
 	<view class="collect">
 		<navigator v-for="(item,num) in floors" :key="num" class="cu-card article no-card" :url="item.url" hover-class="navigator-hover">
-		<view class="cu-item shadow">
+		<view class="cu-item shadow padding-top-xs solid-bottom">
 			<!-- <view class="title"><view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view></view> -->
-			<view class="content solid-bottom">
+			<view class="content">
 				<!-- <image :src="item.coverPic" mode="aspectFit"></image> -->
 				 <!-- <text>{{ floors }}</text> -->
 				 <loayImg :imgUrl="item.coverPic" :fill="'aspectFit'"></loayImg>
