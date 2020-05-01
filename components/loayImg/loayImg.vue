@@ -17,7 +17,7 @@ export default {
     },
     data () {
         return {
-            url: '../../static/images/loading.gif'
+            url: '/static/images/loading.gif'
             // url: 'http://localhost:8080/books/static/images/loading.gif'
         }
     },

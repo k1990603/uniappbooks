@@ -103,7 +103,7 @@
 
 <style>
 	.boxMail{
-		padding-top: 120rpx;
+		// padding-top: 120rpx;
 	}
 	.cu-bar .search-form{
 		background-color: #ffffff;

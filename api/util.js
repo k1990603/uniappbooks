@@ -45,9 +45,10 @@ const request = (url, data, option = { method: 'POST', contentType: 'form' }) =>
 						uni.showToast({ icon: 'none', title: res.data.desc, duration: 1500 });
 					},500)
 				}
+				resolve(res.data);
 			// return reject(res.data.desc);
 		} else {
-			console.log(res, '2222')
+			// console.log(res, '2222')
 			resolve(res.data);
 		}
         

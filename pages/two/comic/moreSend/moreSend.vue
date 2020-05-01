@@ -42,7 +42,7 @@
 			</view>
 		</view>
 		<view v-if="isLoadMore" class="loadMore text-center">加载中...</view>
-		<!-- <image v-if="!isLoadMore && !comicContent.length" class="imgNoData" src="../../../../static/images/no-data1.png" mode="aspectFit" /> -->
+		<!-- <image v-if="!isLoadMore && !comicContent.length" class="imgNoData" src="/static/images/no-data1.png" mode="aspectFit" /> -->
 		<!-- <text v-if="!isLoadMore && !comicContent.length" class="imgtext">暂无数据</text> -->
 	</view>
 </template>

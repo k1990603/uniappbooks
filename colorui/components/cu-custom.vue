@@ -1,7 +1,7 @@
 <template>
 	<view id="header">
 		<!-- :style="[{height:bottomColor?(200 + 'upx'):(CustomBar + 'px')}]" -->
-		<view class="cu-custom" :class="[bottomColor?'bottomColor':'']" >
+		<view class="cu-custom" :style="[{height:bottomColor?(200 + 'upx'):(CustomBar + 'px')}]" :class="[bottomColor?'bottomColor':'']" >
 		<!-- <view class="cu-custom"> -->
 			<view class="cu-bar fixed" :style="style" :class="[bgImage!=''?'none-bg text-white bg-img':'',bgColor]">
 				<view class="action" @tap="BackPage" v-if="isBack">

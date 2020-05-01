@@ -11,7 +11,7 @@
 				<view v-for="(item,index) in chargeList" :key="index" class="padding-sm">
 					<view class="padding-sm radius shadow chargeContent" @tap="checkAction(item.rechargeNum)" :class="checkValue === item.rechargeNum?'light bg-orange lines-red':'lines-gray'">
 						<!-- <view class="cu-tag bg-blue"> -->
-							<image src="../../../static/images/hot.svg" mode=""></image>
+							<image src="/static/images/hot.svg" mode=""></image>
 						<!-- </view> -->
 						<view class="text-lg text-black">{{item.rechargeNum || 0}}元</view>
 						<text v-if="item.rechargeNum<365">{{ item.rechargeNum*100 }}{{item.givingNum?('+'+item.givingNum+'书币'):''}}</text>
@@ -152,7 +152,7 @@
 <style lang="less">
 .charge {
 	height: 100vh;
-	padding-top: 120rpx;
+	// padding-top: 120rpx;
 	.chargeContent {
 		position: relative;
 		transition: all .3s linear;

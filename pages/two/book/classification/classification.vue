@@ -43,7 +43,7 @@
 								</view>
 								<!-- <view class="text-grey">{{ itemdemo.title }}</view> -->
 								<view class="text-gray text-sm flex">
-									<text class="text-cut">
+									<text class="text-cut" style="max-height: 40rpx;">
 										<!-- <text class="cuIcon-infofill text-red  margin-right-xs"></text> -->
 										{{ itemdemo.summary }}
 									</text> </view>

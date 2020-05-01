@@ -2,7 +2,7 @@
     <view>
 		<view v-for="(item_, index) in floors" :key="index">
 			<!-- <view class="floor1"> -->
-				<view v-if="index%2 != 1" class="cu-bar bg-white solid-bottom margin-top">
+				<view v-if="index%2 != 1" class="cu-bar bg-white margin-top">
 					<view class="action">
 						<text class="cuIcon-titles text-orange "></text> {{ item_.title }}
 					</view>

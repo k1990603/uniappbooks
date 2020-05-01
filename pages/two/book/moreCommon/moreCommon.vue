@@ -49,7 +49,7 @@
 			</view>
 		</view>
 		<view v-if="isLoadMore" class="loadMore text-center">加载中...</view>
-		<!-- <image v-if="!isLoadMore && !bookContent.length" class="imgNoData" src="../../../../static/images/no-data1.png" mode="aspectFit" /> -->
+		<!-- <image v-if="!isLoadMore && !bookContent.length" class="imgNoData" src="/static/images/no-data1.png" mode="aspectFit" /> -->
 		<!-- <text v-if="!isLoadMore && !bookContent.length" class="imgtext">暂无数据</text> -->
 		<view class="cu-modal" :class="modalName=='DialogModal1'?'show':''">
 			<view class="cu-dialog margin-left">

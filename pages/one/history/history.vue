@@ -178,7 +178,7 @@
 				API.historicalRecord().then(
 				        res => {
 							// console.log(res.data, '多多')
-							this.floors = res.data
+							this.floors = res.data || []
 							this.floors.forEach((item)=>{
 								// item.type="comic"
 								if (item.type == 1) { // 小说
@@ -191,7 +191,11 @@
 							uni.hideLoading();
 							this.$emit('freshChange')
 				        },
-				        err => {}
+				        err => {
+							uni.stopPullDownRefresh();
+							uni.hideLoading();
+							this.$emit('freshChange')
+						}
 				      );
 			}
 		},
@@ -202,6 +206,7 @@
 				}
 		　　　　},
 			fresh(e){
+				console.log(111111)
 				if (e && this.defaultKey === 0) {
 					this.historicalRecordList()
 				}
@@ -219,7 +224,7 @@
 <style lang="less">
 	.collect {
 		background-color: #FFFFFF;
-		padding-top: 120rpx;
+		// padding-top: 120rpx;
 		// min-width: 100%;
 		// min-height: 100vh;
 		// background-color: #9000FF;

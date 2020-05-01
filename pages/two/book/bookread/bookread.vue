@@ -9,7 +9,7 @@
 			<view :style="{height:statusBarHeight}"></view>
 			<view style="height: 40upx;"></view>
 			<view style="height: 100upx;line-height: 100upx;text-overflow: ellipsis;" class="tMain">
-				<image src="../../../../static/images/yueduBack.png" class="back" @click="back()"></image>
+				<image src="/static/images/yueduBack.png" class="back" @click="back()"></image>
 				<text class="text-cut" style="font-size: 24upx;width: 420rpx">({{section_title}})</text>
 				<text v-if="getToken" class="cuIcon-favorfill" :class="[isCollected?'text-orange':'']" @tap="bookCollectAction"></text>
 				<text v-if="getToken" class="cuIcon-appreciate" :class="[isLiked?'text-orange':'']" @tap="bookLikeAction"></text>
@@ -422,7 +422,7 @@ export default{
 </script>
 <style>
 	@font-face {font-family: "iconfont";
-	  src: url('../../../../static/font/dianliang.ttf') format('truetype');
+	  src: url('/static/font/dianliang.ttf') format('truetype');
 	}
 	.iconfont {
 	  font-family: "iconfont" !important;

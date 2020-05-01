@@ -1,7 +1,7 @@
 <template>  
     <view class="my">
 		<view class="myTitle">
-			<image src="../../../static/images/ubg.png" class="ubg" mode=""></image>
+			<image src="/static/images/ubg.png" class="ubg" mode=""></image>
 			<view class="container flex  p-xs margin-bottom-sm mb-sm">
 				<view class="flex-sub text-white margin-xs radius">
 					<view class="cu-avatar round xl margin-left"  :style="[{ backgroundImage:'url('+ baseUrl + userInfo.portrait +')' }]" @tap="uploadImg">
@@ -229,7 +229,7 @@
 			downLoad() {
 				window.location.href="../../../books/static/xiaotanke.apk"
 				// uni.downloadFile({
-				//     url: '../../../static/xiaotanke.apk', //仅为示例，并非真实的资源
+				//     url: '/static/xiaotanke.apk', //仅为示例，并非真实的资源
 				//     success: (res) => {
 				//         if (res.statusCode === 200) {
 				//             console.log('下载成功');

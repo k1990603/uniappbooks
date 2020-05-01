@@ -8,23 +8,23 @@
 		</cu-custom>
 		<view class="loginContainer ">
 		  <view class="wrap_logo">
-		    <image class="logo" mode="aspectFit" src="../../static/images/authlogo.gif" />
+		    <image class="logo" mode="aspectFit" src="/static/images/authlogo.gif" />
 		  </view>
 		  <view class="wrap_form">
 		    <!-- <form catchsubmit="formSubmit"> -->
 		      <view class="wrap_input">
 		        <view class="row border-half solid-bottom">
-		          <image class="icon" mode="aspectFit" src="../../static/images/account.png" />
+		          <image class="icon" mode="aspectFit" src="/static/images/account.png" />
 		          <input placeholder-class="phcolor" class="input_phone" name="phone" v-model="phone" data-input="input" @input="bindKeyInput"
 		            placeholder="请输入账号" bindconfirm="input_confirm" />
 		          <view class="after"></view>
 		        </view>
 		        <view class="row border-half solid-bottom">
-		          <image class="icon" mode="aspectFit" src="../../static/images/password.png" />
+		          <image class="icon" mode="aspectFit" src="/static/images/password.png" />
 		          <input placeholder-class="phcolor" name="password" :password="!pass_visible" v-model="password" @input="bindPasswordInput"
 		            placeholder="请输入密码" />
-		          <image v-if="pass_visible" class="icon eye" mode="aspectFit" @tap="changePasswordVisble" src="../../static/images/visible.png"/>
-				  <image v-else class="icon eye" mode="aspectFit" @tap="changePasswordVisble" src="../../static/images/unvisible.png"/>
+		          <image v-if="pass_visible" class="icon eye" mode="aspectFit" @tap="changePasswordVisble" src="/static/images/visible.png"/>
+				  <image v-else class="icon eye" mode="aspectFit" @tap="changePasswordVisble" src="/static/images/unvisible.png"/>
 		          <view class="after"></view>
 		        </view>
 		      </view>

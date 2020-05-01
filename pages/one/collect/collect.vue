@@ -10,7 +10,7 @@
 				<view class="desc">
 					<view class="text-content"> 
 						<view class="text-black text-cut">{{ item.title }}</view>
-						<text class="text-cut-two">{{ item.summary }}</text>
+						<text class="text-cut-two" style="width: 450rpx;">{{ item.summary }}</text>
 					</view>
 					<view>
 						<!-- <view v-if="num%2 !== 1" class="cu-tag bg-red light sm round">{{ item.category.slice(0, -1) }}</view>
@@ -105,7 +105,7 @@
 	.collect {
 		// background-color: #FFFFFF;
 		// min-height: calc( 100% - 180rpx);
-		padding-top: 120rpx;
+		// padding-top: 120rpx;
 		// min-height: 100vh;
 		// background-color: #9000FF;
 		.cu-card.article>.cu-item .content>uni-image{

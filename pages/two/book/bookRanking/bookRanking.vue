@@ -27,7 +27,7 @@
 		</view>
 		</navigator>
 		<view v-if="isLoadMore" class="loadMore text-center">加载中...</view>
-		<!-- <image v-if="!isLoadMore && !bookContent.length" class="imgNoData" src="../../../../static/images/no-data1.png" mode="aspectFit" /> -->
+		<!-- <image v-if="!isLoadMore && !bookContent.length" class="imgNoData" src="/static/images/no-data1.png" mode="aspectFit" /> -->
 		<text v-if="!isLoadMore && !bookContent.length" class="imgtext text-center margin-top-xl">暂无数据</text>
 	</view>
 </template>
@@ -109,7 +109,7 @@
 <style lang="less">
 	.bookStyleWrap {
 		height: 100vh;
-		padding-top: 120rpx;
+		// padding-top: 120rpx;
 	}
 	.loadMore {
 		font-size: 30upx;
