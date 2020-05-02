@@ -1,7 +1,7 @@
 <template>
 	<view id="header">
 		<!-- :style="[{height:bottomColor?(200 + 'upx'):(CustomBar + 'px')}]" -->
-		<view class="cu-custom" :style="[{height:bottomColor?(200 + 'upx'):(CustomBar + 'px')}]" :class="[bottomColor?'bottomColor':'']" >
+		<view class="cu-custom" :style="[{height:bottomColorStyle}]" :class="[bottomColor==='oneMove'?'bottomColor':'']" >
 		<!-- <view class="cu-custom"> -->
 			<view class="cu-bar fixed" :style="style" :class="[bgImage!=''?'none-bg text-white bg-img':'',bgColor]">
 				<view class="action" @tap="BackPage" v-if="isBack">
@@ -39,6 +39,17 @@
 				}
 				// #endif
 				return style
+			},
+			bottomColorStyle() {
+				let str = ''
+				if(this.bottomColor === 'oneMove') {
+					str = '200rpx'
+				} else if(this.bottomColor === 'zeroMove') {
+					str = '0rpx'
+				} else {
+					str = this.CustomBar + 'px'
+				}
+				return str
 			}
 		},
 		props: {
@@ -55,8 +66,8 @@
 				default: ''
 			},
 			bottomColor: {
-				type: [Boolean, String],
-				default: false
+				type: String,
+				default: ''
 			},
 			headerStatus: {
 				type: [Boolean, String],

@@ -111,7 +111,7 @@
 	}
 	.oneWrap .content {
 		width: 200%;
-		/* min-height: calc(100vh - 90rpx); */
+		min-height: calc(100vh - 220rpx);
 		transition: all .3s linear;
 		/* display: flex;
 		flex-direction: column;

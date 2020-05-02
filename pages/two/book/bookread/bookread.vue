@@ -2,7 +2,7 @@
 	<view class="Box" style="">
 		<!-- 网页背景开始 -->
 		<view class="pagbg anmt" :style="{backgroundColor:pageBg}"></view>
-		<view class="zhongMenu" @click="dianjile()"></view>
+		<view class="zhongMenu" @tap="dianjile()"></view>
 		<!-- 网页背景结束 -->
 		<!-- 带返回键的导航栏开始 -->
 		<view class="topBox anmt" :style="{color:fontColor,backgroundColor:menuBg,top:show?'0':'-150px'}">

@@ -59,9 +59,9 @@
 					<text class="text-grey">我的账户</text>
 				</view>
 				<div class="action">
-					<button class="cu-btn round lines-orange text-sm margin-right-xs" @tap="toNavigate" data-url="/pages/user/charge/charge">
+					<!-- <button class="cu-btn round lines-orange text-sm margin-right-xs" @tap="toNavigate" data-url="/pages/user/charge/charge">
 						购买书币
-					</button>
+					</button> -->
 					<button class="cu-btn round lines-orange text-sm" @tap="toNavigate" data-url="/pages/user/chargeMoney/chargeMoney">
 						立即充值
 					</button>
@@ -81,12 +81,12 @@
 			</view>
 		</view>
 		<view class="cu-list menu margin-top">
-			<view class="cu-item arrow">
+			<!-- <view class="cu-item arrow">
 				<button class="cu-btn content" open-type="contact">
 					<text class="cuIcon-moneybag text-olive"></text>
 					<text class="text-grey">推广赚钱</text>
 				</button>
-			</view>
+			</view> -->
 			<!-- <view class="cu-item arrow">
 				<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
 					<text class="cuIcon-discoverfill text-orange"></text>

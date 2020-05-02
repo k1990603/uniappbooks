@@ -100,6 +100,7 @@
 			},
 			chargeAction(){
 				let data = { amount: this.checkValue }
+				uni.showLoading({ mask: true})
 				if (this.checkValue>=365) {
 					API.chongVIP(data).then(
 					        res => {
@@ -127,6 +128,7 @@
 				}
 			},
 			getchongBookCurrencyList(){
+				uni.showLoading({ mask: true})
 				API.chongBookCurrencyList().then(
 				        res => {
 							this.chargeList = res.data
@@ -136,6 +138,7 @@
 				      );
 			},
 			chongVIPListAction() {
+				uni.showLoading({ mask: true})
 				API.chongVIPList().then(
 				        res => {
 							let data = res.data[0].vipYear

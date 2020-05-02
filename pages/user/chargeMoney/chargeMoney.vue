@@ -95,6 +95,7 @@
 			chargeAction() {
 				// console.log(this.checkValue)
 				let data = { amount: this.checkValue }
+				uni.showLoading({ mask: true})
 				API.recharge(data).then(
 				        res => {
 							uni.showToast({ icon: 'none', title: '充值成功', duration: 1500 });

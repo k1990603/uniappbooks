@@ -18,7 +18,7 @@
 						<view class="content">
 							<!-- <image :src="itemOne.coverPic"
 							 mode="aspectFit"></image> -->
-							 <loayImg :imgUrl="itemOne.coverPic" :fill="'aspectFit'"></loayImg>
+							 <loayImg :imgUrl="itemOne.coverPic" :fill="'aspectFit'" style="width:170rpx;"></loayImg>
 							<view class="desc">
 								<view class="text-content"> 
 									<view class="text-cut text-black">{{ itemOne.title }}</view>

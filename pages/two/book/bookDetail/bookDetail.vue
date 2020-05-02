@@ -40,13 +40,13 @@
 		</scroll-view>
 		<view class="details grid col-2" :class="[TabCur==1?'tran':'',!ifFull?'currentPage':'']">
 			<view class="detailWrap">
-				<view class="title">作品简介</view>
+				<view class="title text-lg">作品简介</view>
 				<view class="content">{{ floors.summary }}</view>
-				<view class="auther">作者：{{ floors.author }}</view>
+				<view class="auther text-grey">作者：{{ floors.author }}</view>
 				<view class="grid col-3">
-					<view class="text-left"><text class="lg text-orange cuIcon-favorfill"> {{ floors.collectSum || 0 }}人已收藏</text></view>
-					<view class="text-center"><text class="lg text-blue cuIcon-appreciate"> {{ floors.likeSum || 0 }}人已点赞</text></view>
-					<view class="text-right"><text class="lg text-pink cuIcon-like"> {{ (floors.collectSum + floors.likeSum)*10 || 0 }}人气值</text></view>
+					<view class="text-left"><text class="lg text-orange cuIcon-favorfill">  {{ floors.collectSum || 0 }}人已收藏</text></view>
+					<view class="text-center"><text class="lg text-blue cuIcon-appreciate">  {{ floors.likeSum || 0 }}人已点赞</text></view>
+					<view class="text-right"><text class="lg text-pink cuIcon-like">  {{ (floors.collectSum + floors.likeSum)*10 || 0 }}人气值</text></view>
 				</view>
 			</view>
 			<view class="selectWrap grid col-3">
@@ -474,12 +474,12 @@
 
 				.content {
 					color: #666;
-					font-size: 20rpx;
+					// font-size: 20rpx;
 					margin-bottom: 40rpx;
 				}
 
 				.auther {
-					color: #666;
+					// color: #666;
 					margin-bottom: 40rpx;
 				}
 			}

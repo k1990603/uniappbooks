@@ -3,7 +3,7 @@
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
 			<block slot="backText">返回</block>
 			<block slot="content">
-				漫画排行
+				漫画点赞排行
 			</block>
 		</cu-custom>
 		<navigator v-for="(itemOne,num) in comicContent" :key="num" class="cu-card article no-card solid-bottom" :url="'/pages/two/comic/comicDetail/comicDetail?comicId='+ itemOne.id" hover-class="navigator-hover">

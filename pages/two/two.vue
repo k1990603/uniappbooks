@@ -1,6 +1,6 @@
 <template>
 	<view class="twoWrap">
-		<cu-custom bgColor="bg-gradual-pink" :matgintop="true" :bottomColor="showClass ==='oneMove'" :headerStatus="true" :isBack="false">
+		<cu-custom bgColor="bg-gradual-pink" :matgintop="true" :bottomColor="showClass" :headerStatus="true" :isBack="false">
 			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				<s-switch @switchValue="getSwitchValue" :defaultValue="0" :switchList="arr"></s-switch>
@@ -88,7 +88,7 @@
 			getSwitchValue(e){
 				let defaultKey = e.key
 				if (!defaultKey) {
-					this.showClass = ''
+					this.showClass = 'zeroMove'
 				} else if(defaultKey === 1) {
 					this.showClass = 'oneMove'
 				} else {
@@ -97,7 +97,7 @@
 			},
 			toSearch() {
 				// console.log(this.showClass, 999)
-				if(this.showClass === '') {
+				if(this.showClass === 'zeroMove') {
 					// console.log(1111)
 					uni.navigateTo({
 					    url: '/pages/two/book/book_mall/index'

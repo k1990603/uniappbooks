@@ -10,7 +10,7 @@
 				</navigator>
 			</swiper-item>
 		</swiper>
-		<view class="kindWrap grid col-2">
+		<view class="kindWrap grid col-3">
 			<view v-for="(item,index) in avatar" :key="index">
 				<navigator :url="item.url" hover-class="navigator-hover">
 				<view class="kindItem shadow-blur" :class="'bg-gradual-'+item.color">
@@ -73,6 +73,12 @@
 						label: '分类',
 						color: 'orange',
 						url: '/pages/two/comic/classification/classification'
+					},
+					{
+						value: 'pay',
+						label: '储值',
+						color: 'blue',
+						url: '/pages/user/charge/charge'
 					},
 					{
 						value: 'rank',

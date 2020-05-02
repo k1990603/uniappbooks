@@ -3,7 +3,7 @@
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
 			<block slot="backText">返回</block>
 			<block slot="content">
-				小说排行
+				小说点赞排行
 			</block>
 		</cu-custom>
 		<navigator v-for="(itemOne,num) in bookContent" :key="num" class="cu-card article no-card solid-bottom" :url="'/pages/two/book/bookDetail/bookDetail?bookId='+ itemOne.id" hover-class="navigator-hover">

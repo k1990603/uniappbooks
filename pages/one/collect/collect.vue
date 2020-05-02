@@ -1,11 +1,22 @@
 <template>
 	<view class="collect">
-		<navigator v-for="(item,num) in floors" :key="num" class="cu-card article no-card" :url="item.url" hover-class="navigator-hover">
-		<view class="cu-item shadow padding-top-xs solid-bottom">
-			<!-- <view class="title"><view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view></view> -->
+		<view class='cu-list menu-avatar cont' style="width: 100%;">
+		<navigator class="cu-item" v-for="(item,num) in floors" :key="num" :url="item.url" hover-class="navigator-hover">
+			<view class="cu-avatar radius lg" :style="'background-image:url('+
+			item.coverPic+');background-size:contain;'"></view>
 			<view class="content">
-				<!-- <image :src="item.coverPic" mode="aspectFit"></image> -->
-				 <!-- <text>{{ floors }}</text> -->
+				<view class="text-grey">{{ item.title }}</view>
+				<view class="text-gray text-sm flex">
+					<text class="text-cut">
+						<text class="text-red  margin-right-xs"></text>
+						{{ item.summary }}
+					</text> </view>
+			</view>
+		</navigator>
+		</view>
+		<!-- <navigator v-for="(item,num) in floors" :key="num" class="cu-card article no-card" :url="item.url" hover-class="navigator-hover">
+		<view class="cu-item shadow padding-top-xs solid-bottom">
+			<view class="content">
 				 <loayImg :imgUrl="item.coverPic" :fill="'aspectFit'"></loayImg>
 				<view class="desc">
 					<view class="text-content"> 
@@ -13,13 +24,11 @@
 						<text class="text-cut-two" style="width: 450rpx;">{{ item.summary }}</text>
 					</view>
 					<view>
-						<!-- <view v-if="num%2 !== 1" class="cu-tag bg-red light sm round">{{ item.category.slice(0, -1) }}</view>
-						<view v-if="num%2 === 1" class="cu-tag bg-gradual-green light sm round">{{ item.category.slice(0, -1) }}</view> -->
 					</view>
 				</view>
 			</view>
 		</view>
-		</navigator>
+		</navigator> -->
 	</view>
 </template>
 
