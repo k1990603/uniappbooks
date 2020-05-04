@@ -1,7 +1,7 @@
 <template>
 	<view class="comicStyleWrap padding-top-xl bg-white">
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
-			<block slot="backText">返回</block>
+			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				{{ categoryDemo }}
 			</block>
@@ -19,8 +19,8 @@
 						<text>{{ itemOne.summary }}</text>
 					</view>
 					<view>
-						<view v-if="num%2 != 1" class="cu-tag bg-red light sm round">{{ itemOne.category && itemOne.category.slice(0, -1) }}</view>
-						<view v-if="num%2 === 1" class="cu-tag bg-gradual-green light sm round">{{ itemOne.category && itemOne.category.slice(0, -1) }}</view>
+						<view v-if="num%2 != 1" class="cu-tag bg-gradual-red light sm round">{{ itemOne.category && itemOne.category.slice(0, -1) }}</view>
+						<view v-if="num%2 === 1" class="cu-tag bg-gradual-orange light sm round">{{ itemOne.category && itemOne.category.slice(0, -1) }}</view>
 					</view>
 				</view>
 			</view>
@@ -28,7 +28,7 @@
 		</navigator>
 		<view v-if="isLoadMore" class="loadMore text-center">加载中...</view>
 		<!-- <image v-if="!isLoadMore && !comicContent.length" class="imgNoData" src="/static/images/no-data1.png" mode="aspectFit" /> -->
-		<text v-if="!isLoadMore && !comicContent.length" class="imgtext text-center margin-top-xl">暂无数据</text>
+		<view v-if="!isLoadMore && !comicContent.length" class="imgtext text-center margin-top-xl">暂无数据</view>
 	</view>
 </template>
 
@@ -48,7 +48,7 @@
 				pageNumber: 1,
 				pageSize: 10,
 				isLoadMore: true,
-				// pageTotal: 0
+				pageTotal: 0
 			};
 		},
 		components: {
@@ -58,12 +58,13 @@
 			// console.log('下拉刷新');
 			// this.lists = [];
 			// this.refreshing = true;
-			if(this.comicContent.length<this.pageTotal) {
+			// if(this.comicContent.length<this.pageTotal) {
 				this.pageNumber = 1
 				this.comicContent = []
 				this.showSkeleton = true
+				this.isLoadMore = true
 				this.getComicStyleList();
-			}
+			// }
 			
 		},
 		onReachBottom() {

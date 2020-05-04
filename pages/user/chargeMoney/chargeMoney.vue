@@ -1,7 +1,7 @@
 <template>
 	<view class="charge bg-white">
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
-			<block slot="backText">返回</block>
+			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				账户充值
 			</block>

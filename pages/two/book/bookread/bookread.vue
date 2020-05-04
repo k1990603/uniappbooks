@@ -113,6 +113,9 @@
 					<view class="cu-item arrow" v-for="(item,index) in getCapterBookList" :key="index" @tap="tocapter(item.id, item.jiNo)">
 						<view class="content">
 							<view :data-id="item.id">{{ item.title }}</view>
+							<view v-if="item.money" class="cu-tag badge bg-gradual-orange" style="left:5px;right: auto;">
+								<text class="cuIcon-lock"></text>
+							</view>
 						</view>
 					</view>
 				</view>

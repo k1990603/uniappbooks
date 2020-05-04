@@ -2,7 +2,7 @@
 	<view class="bookDetail">
 		<view class="fixed">
 			<cu-custom :isBack="true" :bgColor="titleDemo?'bg-gradual-pink':'text-white'">
-				<block slot="backText">返回</block>
+				<!-- <block slot="backText">返回</block> -->
 				<block v-if="titleDemo" slot="content">{{ titleDemo }}</block>
 				<block v-if="getToken" slot="right">
 					<text class="lg text-pink"></text>
@@ -47,6 +47,9 @@
 				<view v-if="!ifFull?(index<6):true" class="padding-xs" v-for="(item,index) in floors.comicEpisodes" :key="index" :data-id="item.id">
 					<view class="cu-btn radius line-gray" @tap="toRead(item.id)">
 						第{{ index+1 }}章
+						<view v-if="item.money" class="cu-tag badge bg-gradual-orange">
+							<text class="cuIcon-lock"></text>
+						</view>
 					</view>
 				</view>
 				<view v-if="!ifFull" class="flex flex-direction" style="width:100vw;" @tap="changeFill">
@@ -143,8 +146,7 @@
 					<view class="content">
 						<view class="text-grey">{{ item.userName || '' }}</view>
 						<view class="text-orange text-content text-df">
-							<!-- 赠送 {{ item.userAmount || 0 }} 个礼物给作者 -->
-							赠送  {{ item.userAmount || 0 }}个书币给作者
+							赠送  {{ item.userAmount || 0 }}书币给作者
 						</view>
 						<!-- <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
 							<view class="flex">

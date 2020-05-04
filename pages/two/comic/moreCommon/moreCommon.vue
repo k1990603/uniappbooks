@@ -1,7 +1,7 @@
 <template>
 	<view class="comicStyleWrap bg-white">
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
-			<block slot="backText">返回</block>
+			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				最新评论
 			</block>
@@ -96,8 +96,8 @@
 				category: '',
 				imgUrl: '',
 				modalName: null,
-				commentInfo: ''
-				// pageTotal: 0
+				commentInfo: '',
+				pageTotal: 0
 			};
 		},
 		// components: {
@@ -118,6 +118,7 @@
 			this.pageNumber = 1
 			this.comicContent = []
 			this.showSkeleton = true
+			this.isLoadMore = true
 			this.getCommentPageList();
 		},
 		onReachBottom() {

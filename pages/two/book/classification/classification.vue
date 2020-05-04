@@ -2,14 +2,14 @@
 	<view>
 		<view class="fixed">
 			<cu-custom :isBack="true" bgColor="bg-shadeTop text-white">
-				<block slot="backText">返回</block>
+				<!-- <block slot="backText">返回</block> -->
 				<block slot="content">分类</block>
 			</cu-custom>
 		</view>
 		<swiper class="screen-swiper round-dot" :indicator-dots="false" :circular="true" :autoplay="true" interval="5000"
 		 duration="500">
-			<swiper-item v-for="(item,index) in 4" :key="index">
-				<image :src="'https://ossweb-img.qq.com/images/lol/web201310/skin/big3900'+index+ '.jpg'" mode="aspectFill"></image>
+			<swiper-item v-for="(item,index) in swiperList" :key="index">
+				<image :src="item.coverPic" mode="aspectFill"></image>
 			</swiper-item>
 		</swiper>
 		<view class="VerticalBox margin-top-sm">
@@ -70,7 +70,34 @@
 				tabCur: 0,
 				mainCur: 0,
 				verticalNavTop: 0,
-				load: true
+				load: true,
+				swiperList: [
+					{
+					id: 5899,
+					type: 'image',
+					coverPic: '/static/images/p1.png'
+				}, {
+					id: 6888,
+					type: 'image',
+					coverPic: '/static/images/p2.png',
+				}, {
+					id: 7248,
+					type: 'image',
+					coverPic: '/static/images/p3.png'
+				}, {
+					id: 7247,
+					type: 'image',
+					coverPic: '/static/images/p4.png'
+				}, {
+					id: 7245,
+					type: 'image',
+					coverPic: '/static/images/p5.png'
+				}, {
+					id: 7244,
+					type: 'image',
+					coverPic: '/static/images/p6.png'
+				}
+				],
 			};
 		},
 		onLoad() {

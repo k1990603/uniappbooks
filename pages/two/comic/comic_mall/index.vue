@@ -1,7 +1,9 @@
 <template>
 	<view class="boxMail">
-		<cu-custom bgColor="bg-gradual-pink" :headerStatus="true" :isBack="true">
-			<block slot="backText">返回</block>
+		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
+			<block slot="content">
+				漫画搜索
+			</block>
 		</cu-custom>
 		<view class="cu-bar search">
 			<view class="search-form round bg-white">

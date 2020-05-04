@@ -30,6 +30,26 @@
     return msg
   }
   
+  //小说排行
+  // export function bookRanking (type) {
+  //   let msg = ''
+  //   switch (type) {
+  //   case '点赞':
+  //     msg = 1
+  //     break
+  //   case '打赏':
+  //     msg = 2
+  //     break
+  //   case '收藏':
+  //     msg = 3
+  //     break
+  //   case '评论':
+  //     msg = 4
+  //     break
+  //   }
+  //   return msg
+  // }
+  
   //漫画
   export function bookTypeDetail (type) {
     let msg = ''

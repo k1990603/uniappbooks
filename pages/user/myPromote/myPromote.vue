@@ -1,7 +1,8 @@
 <template>
 	<view>
-		<cu-custom bgColor="bg-gradual-pink" :isBack="true"><block slot="backText">返回</block>
-			<block slot="content">一级分销</block>
+		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
+			<!-- <block slot="backText">返回</block> -->
+			<block slot="content">一级分销商</block>
 		</cu-custom>
 		<view class="cu-bar bg-white search fixed" :style="[{top:CustomBar + 'px'}]">
 			<view class="search-form round">
@@ -21,10 +22,11 @@
 						<view class="cu-item" v-for="(items,sub) in item.lists" :key="sub" @tap="toNavigate" data-url="/pages/user/myPromoteTwo/myPromoteTwo" :data-id="items.id">
 							<view class="cu-avatar round lg">{{item.name}}</view>
 							<view class="content">
-								<!-- <view class="text-grey">{{item.name}}<text class="text-abc">{{list[sub].name}}</text>君</view> -->
+								<view class="text-grey">{{item.name}}<text class="text-abc">{{list[sub].name}}</text>君</view>
 								<view class="text-grey">{{ items.name }}</view>
 								<view class="text-gray text-sm">
-									<!-- 有{{sub+2}}个主子需要伺候 -->
+									<!-- <text>充值{{item.tiCommission || 0}}元</text> -->
+									<text>{{item.createTime}}</text>
 								</view>
 							</view>
 						</view>

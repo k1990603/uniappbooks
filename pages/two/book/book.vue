@@ -2,14 +2,14 @@
 	<view class="book">
 		<swiper class="screen-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
 		 :autoplay="true" interval="5000" duration="500">
-			<swiper-item v-for="(item,index) in swiperList" :key="index" class="bg-gradual-pink" :class="cardCur==index?'cur':''">
-				<navigator class="banner" :url="'/pages/two/book/bookDetail/bookDetail?bookId='+item.id" :style="'background:url('+ item.coverPic +') no-repeat center bottom;'">
-					<!-- <image :src="item.coverPic" mode="aspectFill"></image> -->
+			<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
+				<navigator class="banner" :url="'/pages/two/book/bookDetail/bookDetail?bookId='+item.id">
+					<image :src="item.coverPic" mode="aspectFill"></image>
 				</navigator>
 				<!-- <video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video> -->
 			</swiper-item>
 		</swiper>
-		<view class="kindWrap grid col-3">
+		<view class="kindWrap grid col-3 text-center bg-white radius">
 			<view v-for="(item,index) in avatar" :key="index">
 				<navigator :url="item.url" hover-class="navigator-hover">
 					<view class="kindItem shadow-blur" :class="'bg-gradual-'+item.color">
@@ -68,31 +68,31 @@
 				cardCur:0,
 				dotStyle: true,
 				swiperList: [
-				// 	{
-				// 	id: 0,
-				// 	type: 'image',
-				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
-				// }, {
-				// 	id: 1,
-				// 	type: 'image',
-				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg',
-				// }, {
-				// 	id: 2,
-				// 	type: 'image',
-				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
-				// }, {
-				// 	id: 3,
-				// 	type: 'image',
-				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
-				// }, {
-				// 	id: 4,
-				// 	type: 'image',
-				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
-				// }, {
-				// 	id: 5,
-				// 	type: 'image',
-				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
-				// }, {
+					{
+					id: 5899,
+					type: 'image',
+					coverPic: '/static/images/p1.png'
+				}, {
+					id: 6888,
+					type: 'image',
+					coverPic: '/static/images/p2.png',
+				}, {
+					id: 7248,
+					type: 'image',
+					coverPic: '/static/images/p3.png'
+				}, {
+					id: 7247,
+					type: 'image',
+					coverPic: '/static/images/p4.png'
+				}, {
+					id: 7245,
+					type: 'image',
+					coverPic: '/static/images/p5.png'
+				}, {
+					id: 7244,
+					type: 'image',
+					coverPic: '/static/images/p6.png'
+				}
 				// 	id: 6,
 				// 	type: 'image',
 				// 	coverPic: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
@@ -108,13 +108,13 @@
 					{
 						value: 'pay',
 						label: '储值',
-						color: 'blue',
+						color: 'red',
 						url: '/pages/user/charge/charge'
 					},
 					{
 						value: 'rank',
 						label: '排行',
-						color: 'green',
+						color: 'pink',
 						url: '/pages/two/book/bookRanking/bookRanking'
 					},
 					// {
@@ -151,7 +151,7 @@
 				        res => {
 							// console.log(res.data, '多多')
 							this.floors = res.data
-							this.swiperList = this.floors[0].list
+							// this.swiperList = this.floors[0].list
 							console.log(this.swiperList, 999)
 							uni.stopPullDownRefresh();
 							uni.hideLoading();
@@ -194,9 +194,10 @@
 			// background-size: contain;
 		}
 		.kindWrap {
-			background-color: #FFFFFF;
-			padding: 20rpx 0 10rpx;
-			text-align: center;
+			// background-color: #FFFFFF;
+			padding: 20rpx 0 30rpx;
+			box-shadow: 0px 3px 10px rgba(26, 26, 26, 0.2);
+			// text-align: center;
 			.kindItem{
 				margin: 0 auto 10rpx;
 				text-align: center;
@@ -204,8 +205,12 @@
 				height: 100rpx;
 				border-radius: 50%;
 				font-size: 50rpx;
-				padding-top: 20rpx;
-				box-shadow: 0px 0 3px 3px #fff inset, 0px 6px 9px 1px #DDDDDD;
+				padding-top: 12rpx;
+				// box-shadow: 0px 0 3px 3px #fff inset, 0px 6px 9px 1px #DDDDDD;
+				box-shadow: 0px 6px 9px 1px rgba(0,0,0,.3);
+				.text-white{
+					font-size: 70rpx;
+				}
 			}
 		}
 		.floor1 {

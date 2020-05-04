@@ -1,15 +1,18 @@
 <template>
 	<view class="text-center">
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
-			<block slot="backText">返回</block>
+			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				我的推广二维码
 			</block>
 		</cu-custom>
 		<!-- <loayImg :imgUrl="baseUrl + url" :fill="'aspectFit'"></loayImg> -->
 		<!-- <text>{{ baseUrl + url }}</text> -->
-		<image class="code margin-top-xl" :src="baseUrl + url" mode="aspectFit"></image>
-		<view class="margin-top-xl text-gray">用户扫码注册，可赚取佣金</view>
+		<image class="code margin-top-xl" :src="baseUrl + url" mode="aspectFit" @longtap="save"></image>
+		<view class="margin-top-xl text-gray">
+			<text>{{ baseUrl + url }}</text>
+		</view>
+		<view class="margin-top-xl text-gray">分享扫码，注册可赚取佣金</view>
 	</view>
 </template>
 
@@ -47,6 +50,27 @@
 				        },
 				        err => {}
 				      );
+			},
+			save() {
+				
+				// #ifdef APP-PLUS
+				uni.showActionSheet({
+					itemList: ['保存图片到相册'],
+					success: () => {
+						plus.gallery.save(this.baseUrl + this.url, function() {
+							uni.showToast({
+								title: '保存成功',
+								icon: 'none'
+							})
+						}, function() {
+							uni.showToast({
+								title: '保存失败，请重试！',
+								icon: 'none'
+							})
+						});
+					}
+				})
+				// #endif
 			}
 		}
 	}

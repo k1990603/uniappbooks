@@ -1,7 +1,8 @@
 <template>
 	<view>
-		<cu-custom bgColor="bg-gradual-pink" :isBack="true"><block slot="backText">返回</block>
-			<block slot="content">三级分销</block>
+		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
+			<!-- <block slot="backText">返回</block> -->
+			<block slot="content">三级分销商</block>
 		</cu-custom>
 		<view class="cu-bar bg-white search fixed" :style="[{top:CustomBar + 'px'}]">
 			<view class="search-form round">

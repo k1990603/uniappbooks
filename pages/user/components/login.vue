@@ -208,7 +208,7 @@
 	
 	.loginWrap {
 	  background-color: white;
-	  height: 100vh;
+	  min-height: calc(100vh - 90rpx);
 	}
 	
 	.loginContainer {

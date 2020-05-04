@@ -11,11 +11,11 @@
 			"path": "pages/one/one",
 			"style": {
 				"navigationBarTitleText": "书架",
-				"enablePullDownRefresh": true,
-				"disableScroll":true,
-				        "app-plus":{
-				            "bounce":"none"
-				        }
+				"enablePullDownRefresh": true
+				// "disableScroll":true,
+				        // "app-plus":{
+				        //     "bounce":"none"
+				        // }
 			}
 		},
 		// {
@@ -103,6 +103,17 @@
 				"navigationBarTitleText": "书币充值"
 			}
 		}, {
+			"path": "pages/user/notice/notice",
+				"style": {
+					"navigationBarTitleText": "推广赚取"
+				}
+		}, {
+			"path": "pages/user/noticeShow/noticeShow",
+				"style": {
+					"navigationBarTitleText": "我的消息",
+					"enablePullDownRefresh": true
+				}
+		}, {
 			"path": "pages/user/chargeMoney/chargeMoney",
 			"style": {
 				"navigationBarTitleText": "充值"
@@ -162,6 +173,18 @@
 					"enablePullDownRefresh": true
 			}
 		}, {
+			"path": "pages/user/bill/bill",
+				"style": {
+					"navigationBarTitleText": "账户明细",
+					"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/user/commission/commission",
+					"style": {
+						"navigationBarTitleText": "佣金列表",
+						"enablePullDownRefresh": true
+				}
+			}, {
 			"path": "pages/two/book/bookType/bookType",
 			"style": {
 				"navigationBarTitleText": "分类",
@@ -174,7 +197,11 @@
 				"enablePullDownRefresh": true
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/process/process",
+            "style" : {}
+        }
+    ],
 	"tabBar": {
 		"color": "#999",
 		"selectedColor": "#E14A4A",
@@ -183,20 +210,26 @@
 		"list": [{
 				"pagePath": "pages/one/one",
 				"text": "书架",
-				"iconPath": "/static/images/tabBar/bookstore-o.png",
-				"selectedIconPath": "/static/images/tabBar/bookstore.png"
+				"iconPath": "/static/images/tabBar1/book.png",
+				"selectedIconPath": "/static/images/tabBar1/book1.png"
 			},
 			{
 				"pagePath": "pages/two/two",
-				"text": "书城",
-				"iconPath": "/static/images/tabBar/bookshelf-o.png",
-				"selectedIconPath": "/static/images/tabBar/bookshelf.png"
+				"text": "精选",
+				"iconPath": "/static/images/tabBar1/main.png",
+				"selectedIconPath": "/static/images/tabBar1/main1.png"
+			},
+			{
+				"pagePath": "pages/process/process",
+				"text": "分享",
+				"iconPath": "/static/images/tabBar1/liu.png",
+				"selectedIconPath": "/static/images/tabBar1/liu1.png"
 			},
 			{
 				"pagePath": "pages/user/user",
 				"text": "我的",
-				"iconPath": "/static/images/tabBar/personal-o.png",
-				"selectedIconPath": "/static/images/tabBar/personal.png"
+				"iconPath": "/static/images/tabBar1/user.png",
+				"selectedIconPath": "/static/images/tabBar1/user1.png"
 			}
 		]
 	},

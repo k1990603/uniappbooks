@@ -45,7 +45,7 @@
 				if(this.bottomColor === 'oneMove') {
 					str = '200rpx'
 				} else if(this.bottomColor === 'zeroMove') {
-					str = '0rpx'
+					str = '80rpx'
 				} else {
 					str = this.CustomBar + 'px'
 				}

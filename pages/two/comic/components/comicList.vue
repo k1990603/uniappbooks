@@ -1,10 +1,12 @@
 <template>
     <view>
-		<view v-for="(item_, index) in floors" :key="index" class="solid-bottom">
+		<view v-for="(item_, index) in floors" :key="index" class="solid-bottom" style="box-shadow: 0px 3px 10px rgba(26, 26, 26, 0.2);">
 			<!-- <view class="floor1"> -->
 				<view v-if="index%2 != 1" class="cu-bar bg-white margin-top">
 					<view class="action">
-						<text class="cuIcon-titles text-orange "></text> {{ item_.title }}
+						<text class="cuIcon-titles text-orange "></text> 
+						<text class="text-black text-bold">{{ item_.title }}</text>
+						<!-- {{ item_.title }} -->
 					</view>
 					<view class="action text-orange" @tap="toNavigate" data-url="/pages/two/comic/comicType/comicType" :data-id="item_.title">
 						<text>更多</text>
@@ -21,12 +23,12 @@
 							 <loayImg :imgUrl="itemOne.coverPic"></loayImg>
 							<view class="desc">
 								<view class="text-content"> 
-									<view class="text-black">{{ itemOne.title }}</view>
+									<view class="text-black text-bold">{{ itemOne.title }}</view>
 									<text>{{ itemOne.summary }}</text>
 								</view>
 								<view>
-									<view v-if="num%2 !== 1" class="cu-tag bg-red light sm round">{{ itemOne.category.slice(0, -1) }}</view>
-									<view v-if="num%2 === 1" class="cu-tag bg-gradual-green light sm round">{{ itemOne.category.slice(0, -1) }}</view>
+									<view v-if="num%2 !== 1" class="cu-tag bg-gradual-red light sm round">{{ itemOne.category.slice(0, -1) }}</view>
+									<view v-if="num%2 === 1" class="cu-tag bg-gradual-orange light sm round">{{ itemOne.category.slice(0, -1) }}</view>
 								</view>
 							</view>
 						</view>
@@ -37,7 +39,9 @@
 			
 			<view v-if="index%2 === 1" class="cu-bar bg-white solid-bottom margin-top">
 				<view class="action">
-					<text class="cuIcon-titles text-orange "></text> {{ item_.title }}
+					<text class="cuIcon-titles text-orange "></text> 
+					<text class="text-black text-bold">{{ item_.title }}</text>
+					<!-- {{ item_.title }} -->
 				</view>
 				<view class="action text-orange" @tap="toNavigate" data-url="/pages/two/comic/comicType/comicType" :data-id="item_.title">
 					<text>更多</text>
@@ -54,7 +58,7 @@
 						</view>
 					</view>
 					<view class="text-content">
-						<view class="text-black" style="marginTop:20rpx">{{ item.title }}</view>
+						<view class="text-black text-bold" style="marginTop:20rpx">{{ item.title }}</view>
 						<view class="text-cut text-gray" style="width:320rpx;fontSize:20rpx">{{ item.summary }}</view>
 					</view>
 					</navigator>

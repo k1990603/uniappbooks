@@ -54,3 +54,29 @@ export function chongVIPList(data) {
 export function chongVIP(data) {
   return api.get('/books/user/chongVIP',data);
 }
+
+// 用户分销佣金列表
+export function getCommissionList(data) {
+  return api.get('/books/account/getCommissionList',data);
+}
+
+// 用户分销总佣金
+export function getCommissionSum(data) {
+  return api.get('/books/account/getCommissionSum',data);
+}
+
+// 分佣规则
+export function show(data) {
+  return api.get('/books/retailStore/show',data);
+}
+
+// 获取最新公告
+export function noticeShow(data) {
+  return api.get('/books/article/show',data);
+}
+
+// 账号明细
+export function getBalanceList(data) {
+  return api.get('/books/user/getBalanceList',data);
+}
+

@@ -1,7 +1,7 @@
 <template>
 	<view class="bookStyleWrap padding-top-xl bg-white">
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
-			<block slot="backText">返回</block>
+			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				{{ categoryDemo }}
 			</block>
@@ -12,7 +12,7 @@
 			<view class="content solid-bottom">
 				<!-- <image :src="itemOne.coverPic"
 				 mode="aspectFill"></image> -->
-				 <loayImg :imgUrl="itemOne.coverPic" :fill="'aspectFit'"></loayImg>
+				 <loayImg :imgUrl="itemOne.coverPic" :fill="'aspectFit'" style="width:120rpx;"></loayImg>
 				<view class="desc">
 					<view class="text-content"> 
 						<view class="text-cut text-black">{{ itemOne.title }}</view>
@@ -20,7 +20,7 @@
 					</view>
 					<view>
 						<!-- <view v-if="num%2 != 1" class="cu-tag bg-red light sm round">{{ itemOne.category.slice(0, -1) }}</view> -->
-						<view class="cu-tag bg-gradual-green light sm round">{{ itemOne.author }}</view>
+						<view class="cu-tag bg-gradual-orange light sm round">{{ itemOne.author }}</view>
 					</view>
 				</view>
 			</view>
@@ -50,8 +50,8 @@
 				pageNumber: 1,
 				pageSize: 10,
 				isLoadMore: true,
-				navstaus: false
-				// pageTotal: 0
+				navstaus: false,
+				pageTotal: 0
 			};
 		},
 		onPullDownRefresh() {
@@ -61,6 +61,7 @@
 			if(this.bookContent.length<this.pageTotal) {
 				this.pageNumber = 1
 				this.bookContent = []
+				this.isLoadMore = true
 				this.navstaus?this.categoryPageListList():this.getbookTypeList();
 			}
 		},

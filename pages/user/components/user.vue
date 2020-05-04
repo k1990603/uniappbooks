@@ -36,18 +36,24 @@
 			</view>
 		</view>
 		<!-- 书币 -->
-		<view class="bg-white grid col-2 padding bookWrap">
+		<view class="bg-white grid col-3 padding bookWrap">
 			<view class="text-center solids-right">
 				<text>书币余额</text>
 			</view>
 			<view class="text-center">
-				<text>余额</text>
+				<text>账户余额</text>
+			</view>
+			<view class="text-center">
+				<text>佣金总数</text>
 			</view>
 			<view class="text-center solids-right">
-				<text class="text-gradual-orange text-xxl">{{ userInfo.bookCurrency || 0 }}</text>
+				<text class="text-orange text-xxl">{{ userInfo.bookCurrency || 0 }}</text>
+			</view>
+			<view class="text-center solids-right">
+				<text class="text-orange text-xxl">{{ userInfo.balance || 0 }}</text>
 			</view>
 			<view class="text-center text-lg">
-				<text class="text-gradual-orange text-xxl">{{ userInfo.balance || 0 }}</text>
+				<text class="text-orange text-xxl">{{ userInfo.commission || 0 }}</text>
 			</view>
 			<!-- <view></view> -->
 		</view>
@@ -59,9 +65,9 @@
 					<text class="text-grey">我的账户</text>
 				</view>
 				<div class="action">
-					<!-- <button class="cu-btn round lines-orange text-sm margin-right-xs" @tap="toNavigate" data-url="/pages/user/charge/charge">
+					<button class="cu-btn round lines-orange text-sm margin-right-xs" @tap="toNavigate" data-url="/pages/user/charge/charge">
 						购买书币
-					</button> -->
+					</button>
 					<button class="cu-btn round lines-orange text-sm" @tap="toNavigate" data-url="/pages/user/chargeMoney/chargeMoney">
 						立即充值
 					</button>
@@ -81,12 +87,12 @@
 			</view>
 		</view>
 		<view class="cu-list menu margin-top">
-			<!-- <view class="cu-item arrow">
+			<view class="cu-item arrow" @tap="toNavigate" data-url="/pages/user/notice/notice">
 				<button class="cu-btn content" open-type="contact">
 					<text class="cuIcon-moneybag text-olive"></text>
 					<text class="text-grey">推广赚钱</text>
 				</button>
-			</view> -->
+			</view>
 			<!-- <view class="cu-item arrow">
 				<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
 					<text class="cuIcon-discoverfill text-orange"></text>
@@ -96,13 +102,13 @@
 			<view class="cu-item arrow" @tap="toNavigate" data-url="/pages/user/myPromote/myPromote">
 				<view class="content">
 					<text class="cuIcon-friend text-pink"></text>
-					<text class="text-grey">我的推广用户</text>
+					<text class="text-grey">推广用户</text>
 				</view>
 			</view>
 			<view class="cu-item arrow" @tap="toNavigate" data-url="/pages/user/myCode/myCode">
 				<view class="content">
 					<text class="cuIcon-qrcode text-green"></text>
-					<text class="text-grey">我的推广二维码</text>
+					<text class="text-grey">推广二维码</text>
 				</view>
 			</view>
 			<!-- <view class="cu-item arrow">
@@ -111,22 +117,28 @@
 					<text class="text-grey">客服帮忙</text>
 				</view>
 			</view> -->
-			<view class="cu-item arrow">
+			<view class="cu-item arrow" @tap="toNavigate" data-url="/pages/user/noticeShow/noticeShow">
 				<view class="content">
 					<text class="cuIcon-mark text-yellow"></text>
 					<text class="text-grey">我的消息</text>
 				</view>
 			</view>
-			<view class="cu-item arrow">
+			<!-- <view class="cu-item arrow">
 				<view class="content">
 					<text class="cuIcon-form text-cyan"></text>
 					<text class="text-grey">建议反馈</text>
 				</view>
+			</view> -->
+			<view class="cu-item arrow" @tap="toNavigate" data-url="/pages/user/bill/bill">
+				<view class="content">
+					<text class="cuIcon-form text-cyan"></text>
+					<text class="text-grey">账户明细</text>
+				</view>
 			</view>
-			<view class="cu-item arrow">
+			<view class="cu-item arrow" @tap="toNavigate" data-url="/pages/user/commission/commission">
 				<view class="content">
 					<text class="cuIcon-recharge text-pink"></text>
-					<text class="text-grey">账单明细</text>
+					<text class="text-grey">佣金列表</text>
 				</view>
 			</view>
 			<!-- #ifdef H5 -->
@@ -227,7 +239,8 @@
 		// },
         methods: {
 			downLoad() {
-				window.location.href="../../../books/static/xiaotanke.apk"
+				// window.location.href="../../../books/static/xiaotanke.apk"
+				window.open('/static/xiaotanke.apk')
 				// uni.downloadFile({
 				//     url: '/static/xiaotanke.apk', //仅为示例，并非真实的资源
 				//     success: (res) => {

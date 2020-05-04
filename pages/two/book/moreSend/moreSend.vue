@@ -1,7 +1,7 @@
 <template>
 	<view class="bookStyleWrap bg-white">
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
-			<block slot="backText">返回</block>
+			<!-- <block slot="backText">返回</block> -->
 			<block slot="content">
 				打赏记录
 			</block>
@@ -22,7 +22,8 @@
 				<view class="content">
 					<view class="text-grey">{{ item.userName || '' }}</view>
 					<view class="text-orange text-content text-df">
-						赠送 {{ item.userAmount || 0 }} 个礼物给作者
+						<!-- 赠送 {{ item.userAmount || 0 }} 礼物给作者 -->
+						共赠送  {{ item.userAmount || 0 }}书币给作者
 					</view>
 					<!-- <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
 						<view class="flex">
@@ -42,7 +43,7 @@
 		</view>
 		<view v-if="isLoadMore" class="loadMore text-center">加载中...</view>
 		<!-- <image v-if="!isLoadMore && !bookContent.length" class="imgNoData" src="/static/images/no-data1.png" mode="aspectFit" /> -->
-		<!-- <text v-if="!isLoadMore && !bookContent.length" class="imgtext">暂无数据</text> -->
+		<view v-if="!isLoadMore && !bookContent.length" class="imgtext">暂无数据</view>
 	</view>
 </template>
 
@@ -63,7 +64,7 @@
 				pageNumber: 1,
 				pageSize: 10,
 				isLoadMore: true,
-				// pageTotal: 0
+				pageTotal: 0
 			};
 		},
 		// components: {
@@ -81,6 +82,7 @@
 			this.pageNumber = 1
 			this.bookContent = []
 			this.showSkeleton = true
+			this.isLoadMore = true
 			this.getSendPageList();
 		},
 		onReachBottom() {

@@ -3,7 +3,7 @@
 		<view class="fixed">
 			<!-- <cu-custom :isBack="true" bgColor="bg-shadeTop text-white"> -->
 			<cu-custom :isBack="true" :bgColor="titleDemo?'bg-gradual-pink':'text-white'">
-				<block slot="backText">返回</block>
+				<!-- <block slot="backText">返回</block> -->
 				<block v-if="titleDemo" slot="content">{{ titleDemo }}</block>
 				<block v-if="getToken" slot="right">
 					<text class="lg text-pink"></text>
@@ -53,7 +53,13 @@
 				<view v-if="!ifFull?(index<6):true" class="padding-xs" v-for="(item,index) in floors.bookEpisodeList" :key="index" :data-id="item.id">
 					<view class="cu-btn radius line-gray" @tap="toRead(item.id, item.jiNo)">
 						第{{ index+1 }}章
+						<view v-if="item.money" class="cu-tag badge bg-gradual-orange">
+							<text class="cuIcon-lock"></text>
+						</view>
 					</view>
+					<!-- <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);">
+						<view class="cu-tag badge">vip</view>
+					</view> -->
 				</view>
 				<view v-if="!ifFull" class="flex flex-direction" style="width:100vw;" @tap="changeFill">
 					<button class="cu-btn radius bg-gray lg text-sm margin-tb-sm">查看更多章节</button>
@@ -149,7 +155,7 @@
 					<view class="content">
 						<view class="text-grey">{{ item.userName || '' }}</view>
 						<view class="text-orange text-content text-df">
-							共赠送  {{ item.userAmount || 0 }}个书币给作者
+							共赠送  {{ item.userAmount || 0 }}书币给作者
 						</view>
 						<!-- <view class="margin-top-sm flex justify-between"> -->
 							<!-- <view class="text-gray text-df">{{ timestampToTime(item.createTime)}}</view> -->

@@ -1,10 +1,11 @@
 <template>
     <view>
-		<view v-for="(item_, index) in floors" :key="index">
+		<view v-for="(item_, index) in floors" :key="index" class="bg-white radius" style="box-shadow: 0px 3px 10px rgba(26, 26, 26, 0.2);">
 			<!-- <view class="floor1"> -->
 				<view v-if="index%2 != 1" class="cu-bar bg-white margin-top">
 					<view class="action">
-						<text class="cuIcon-titles text-orange "></text> {{ item_.title }}
+						<text class="cuIcon-titles text-orange "></text> 
+						<text class="text-black text-bold">{{ item_.title }}</text>
 					</view>
 					<view class="action text-orange" @tap="toNavigate" data-url="/pages/two/book/bookType/bookType" :data-category="item_.title">
 						<text>更多</text>
@@ -18,15 +19,15 @@
 						<view class="content">
 							<!-- <image :src="itemOne.coverPic"
 							 mode="aspectFit"></image> -->
-							 <loayImg :imgUrl="itemOne.coverPic" :fill="'aspectFit'" style="width:170rpx;"></loayImg>
+							 <loayImg :imgUrl="itemOne.coverPic" :fill="'aspectFit'" style="width:140rpx;"></loayImg>
 							<view class="desc">
 								<view class="text-content"> 
-									<view class="text-cut text-black">{{ itemOne.title }}</view>
+									<view class="text-cut text-black text-bold">{{ itemOne.title }}</view>
 									<view class="text-cut-two">{{ itemOne.summary }}</view>
 								</view>
 								<view>
 									<!-- <view v-if="num%2 != 1" class="cu-tag bg-red light sm round">{{ itemOne.category.slice(0, -1) }}</view> -->
-									<view class="cu-tag bg-gradual-green light sm round">{{ itemOne.author }}</view>
+									<view class="cu-tag bg-gradual-orange light sm round">{{ itemOne.author }}</view>
 								</view>
 							</view>
 						</view>
@@ -37,7 +38,9 @@
 			
 			<view v-if="index%2 === 1" class="cu-bar bg-white solid-bottom margin-top">
 				<view class="action">
-					<text class="cuIcon-titles text-orange "></text> {{ item_.title }}
+					<text class="cuIcon-titles text-orange "></text> 
+					<text class="text-black text-bold">{{ item_.title }}</text>
+					<!-- {{ item_.title }} -->
 				</view>
 				<view class="action text-orange" @tap="toNavigate" data-url="/pages/two/book/bookType/bookType" :data-category="item_.title">
 					<text>更多</text>
@@ -54,7 +57,7 @@
 						</view>
 					</view>
 					<view class="text-content">
-						<view class="text-cut text-black" style="marginTop:20rpx">{{ item.title }}</view>
+						<view class="text-cut text-black text-bold" style="marginTop:20rpx">{{ item.title }}</view>
 						<view class="text-cut text-gray">{{ item.summary }}</view>
 					</view>
 					</navigator>

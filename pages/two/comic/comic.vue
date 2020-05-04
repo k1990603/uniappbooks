@@ -10,13 +10,13 @@
 				</navigator>
 			</swiper-item>
 		</swiper>
-		<view class="kindWrap grid col-3">
+		<view class="kindWrap grid col-3 text-center bg-white radius">
 			<view v-for="(item,index) in avatar" :key="index">
 				<navigator :url="item.url" hover-class="navigator-hover">
 				<view class="kindItem shadow-blur" :class="'bg-gradual-'+item.color">
-					<text class="lg text-white" :class="'cuIcon-' + item.value"></text>
+					<text class="text-white" :class="'cuIcon-' + item.value"></text>
 				</view>
-				<text class="text-black">{{item.label}}</text>
+				<text>{{item.label}}</text>
 				</navigator>
 			</view>
 		</view>
@@ -77,13 +77,13 @@
 					{
 						value: 'pay',
 						label: '储值',
-						color: 'blue',
+						color: 'red',
 						url: '/pages/user/charge/charge'
 					},
 					{
 						value: 'rank',
 						label: '排行',
-						color: 'green',
+						color: 'pink',
 						url: '/pages/two/comic/comicRanking/comicRanking'
 					},
 					// {
@@ -188,9 +188,10 @@
 			margin-top: 60rpx;
 		}
 		.kindWrap {
-			background-color: #FFFFFF;
-			padding: 20rpx 0 10rpx;
-			text-align: center;
+			// background-color: #FFFFFF;
+			padding: 20rpx 0 30rpx;
+			box-shadow: 0px 3px 10px rgba(26, 26, 26, 0.2);
+			// text-align: center;
 			.kindItem{
 				margin: 0 auto 10rpx;
 				text-align: center;
@@ -198,8 +199,12 @@
 				height: 100rpx;
 				border-radius: 50%;
 				font-size: 50rpx;
-				padding-top: 20rpx;
-				box-shadow: 0px 0 3px 3px #fff inset, 0px 6px 9px 1px #DDDDDD;
+				padding-top: 12rpx;
+				// box-shadow: 0px 0 3px 3px #fff inset, 0px 6px 9px 1px #DDDDDD;
+				box-shadow: 0px 6px 9px 1px rgba(0,0,0,.3);
+				.text-white{
+					font-size: 70rpx;
+				}
 			}
 		}
 	}
