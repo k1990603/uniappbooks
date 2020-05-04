@@ -19,17 +19,33 @@
 				<view v-if="!!item.lists.length" :class="'indexItem-' + item.name" :id="'indexes-' + item.name" :data-index="item.name">
 					<view class="padding">{{item.name}}</view>
 					<view class="cu-list menu-avatar no-padding">
+						
 						<view class="cu-item" v-for="(items,sub) in item.lists" :key="sub" @tap="toNavigate" data-url="/pages/user/myPromoteTwo/myPromoteTwo" :data-id="items.id">
 							<view class="cu-avatar round lg">{{item.name}}</view>
 							<view class="content">
-								<view class="text-grey">{{item.name}}<text class="text-abc">{{list[sub].name}}</text>君</view>
 								<view class="text-grey">{{ items.name }}</view>
 								<view class="text-gray text-sm">
-									<!-- <text>充值{{item.tiCommission || 0}}元</text> -->
-									<text>{{item.createTime}}</text>
+									<text class="margin-right-xs text-orange">累计充值: {{items.tiCommission || 0}}元</text>
 								</view>
 							</view>
+							<view class="action padding-right-sm" style="width: 260rpx;">
+								<view class="cu-tag round sm bg-white" style="float: right;">{{items.createTime}}</view>
+								<view class="cu-tag light sm round" :class="items.isVip?'bg-gradual-pink':'bg-grey'" style="float: right;">vip</view>
+							</view>
 						</view>
+						<!-- <view class="cu-item" v-for="(items,sub) in item.lists" :key="sub" @tap="toNavigate" data-url="/pages/user/myPromoteTwo/myPromoteTwo" :data-id="items.id">
+							<view class="cu-avatar round lg">{{item.name}}</view>
+							<view class="cu-tag light sm round" :class="items.isVip?'bg-gradual-pink':'bg-grey'">vip</view>
+							<view class="content">
+								<view class="text-grey">{{ items.name }}</view>
+								<view class="text-gray text-sm">
+									<text>充值{{items.tiCommission || 0}}元</text>
+								</view>
+								<view class="cu-tag light sm round">
+									{{items.createTime}}
+								</view>
+							</view>
+						</view> -->
 					</view>
 				</view>
 			</block>
@@ -116,14 +132,16 @@
 						// console.log(str, item.aliName[0],PinyinMatch.match(item.aliName[0], str), 555555)
 						let regExg = this.searchText?(!!PinyinMatch.match(item.aliName, this.searchText)):(!!PinyinMatch.match(item.aliName[0], str))
 						if(!!PinyinMatch.match(item.aliName[0], str)) {
+							// console.log(item.createTime, 9999)
 							if(this.searchText){
 								if (!!PinyinMatch.match(item.aliName, this.searchText)) {
-									list[i].lists.push({ name: item.aliName, id: item.id })
+									list[i].lists.push({ name: item.aliName, id: item.id, createTime: item.createTime, isVipL: item.isVip })
 								}
 							}else{
-								list[i].lists.push({ name: item.aliName, id: item.id })
+								list[i].lists.push({ name: item.aliName, id: item.id, createTime: item.createTime, isVip: item.isVip })
 							}
 						}
+						console.log(this.list, 999)
 					})
 					
 				}

@@ -22,12 +22,22 @@
 						<view class="cu-item" v-for="(items,sub) in item.lists" :key="sub">
 							<view class="cu-avatar round lg">{{item.name}}</view>
 							<view class="content">
-								<!-- <view class="text-grey">{{item.name}}<text class="text-abc">{{list[sub].name}}</text>君</view> -->
+								<view class="text-grey">{{ items.name }}</view>
+								<view class="text-gray text-sm">
+									<text class="margin-right-xs text-orange">累计充值: {{items.tiCommission || 0}}元</text>
+								</view>
+							</view>
+							<view class="action padding-right-sm" style="width: 260rpx;">
+								<view class="cu-tag round sm bg-white" style="float: right;">{{items.createTime}}</view>
+								<view class="cu-tag light sm round" :class="items.isVip?'bg-gradual-pink':'bg-grey'" style="float: right;">vip</view>
+							</view>
+							<!-- <view class="cu-avatar round lg">{{item.name}}</view>
+							<view class="content">
 								<view class="text-grey">{{ items.name }}</view>
 								<view class="text-gray text-sm">
 									有{{sub+2}}个主子需要伺候
 								</view>
-							</view>
+							</view> -->
 						</view>
 					</view>
 				</view>
@@ -106,14 +116,20 @@
 						// console.log(str, item.aliName[0],PinyinMatch.match(item.aliName[0], str), 555555)
 						let regExg = this.searchText?(!!PinyinMatch.match(item.aliName, this.searchText)):(!!PinyinMatch.match(item.aliName[0], str))
 						if(!!PinyinMatch.match(item.aliName[0], str)) {
+							// if(this.searchText){
+							// 	if (!!PinyinMatch.match(item.aliName, this.searchText)) {
+							// 		list[i].lists.push({ name: item.aliName })
+							// 	}
+							// }else{
+							// 	list[i].lists.push({ name: item.aliName })
+							// }
 							if(this.searchText){
 								if (!!PinyinMatch.match(item.aliName, this.searchText)) {
-									list[i].lists.push({ name: item.aliName })
+									list[i].lists.push({ name: item.aliName, id: item.id, createTime: item.createTime, isVipL: item.isVip })
 								}
 							}else{
-								list[i].lists.push({ name: item.aliName })
+								list[i].lists.push({ name: item.aliName, id: item.id, createTime: item.createTime, isVip: item.isVip })
 							}
-							
 						}
 					})
 					
