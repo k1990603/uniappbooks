@@ -68,12 +68,12 @@
 				pageNumber: 1,
 				pageSize: 10,
 				isLoadMore: true,
-				TabCur: 'like',
+				TabCur: 'likes',
 				scrollLeft: 0,
 				// type: 1,
 				selectList: [
 					{
-						id: 'like',
+						id: 'likes',
 						name: '点赞',
 					},
 					{
